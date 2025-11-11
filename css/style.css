@@ -1,11 +1,12 @@
 /* 1. Reset e Variáveis */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #343a40;
-    --light-bg: #e9ecef;
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #343a40; /* Cinza escuro para cabeçalho */
+    --light-bg: #f8f9fa; /* Fundo muito claro */
     --card-bg: #ffffff;
-    --text-color: #333;
-    --text-light: #6c757d;
+    --text-color: #212529; /* Texto escuro */
+    --text-light: #495057; /* Texto de parágrafo */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Sombra mais suave */
 }
 
 * {
@@ -27,23 +28,23 @@ body {
     color: var(--card-bg);
     padding: 30px 20px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais forte no header */
 }
 
 .page-header h1 {
     font-size: 2.8em;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .main-nav ul {
     list-style-type: none;
-    margin-top: 15px;
+    padding: 0;
 }
 
 .main-nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .main-nav ul li a {
@@ -56,61 +57,60 @@ body {
 
 .main-nav ul li a:hover {
     color: var(--primary-color);
-    text-decoration: underline;
 }
 
 /* 3. Layout Principal (CSS Grid) */
 .news-grid {
-    /* Centraliza o conteúdo e adiciona espaço nas laterais */
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 1280px;
+    margin: 50px auto; /* Aumentamos o espaçamento vertical */
+    padding: 0 30px;
 
-    /* A MÁGICA do Grid: Define 3 colunas e espaçamento */
+    /* CSS Grid: Layout responsivo de 3 colunas */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; /* Aumentamos o espaçamento entre os cards */
 }
 
 /* 4. Estilos do Artigo (Card) */
 .news-article {
     background-color: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Garante que a imagem respeite as bordas */
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px var(--shadow-color); /* Sombra suave para efeito 3D */
+    overflow: hidden; 
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* Efeito de destaque ao passar o mouse */
+/* Efeito de destaque no hover */
 .news-article:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px); /* Move mais para cima */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* 5. Imagem (Correção e Estilo) */
 .article-img {
     width: 100%;
-    height: 200px; /* Altura fixa para uniformidade */
-    object-fit: cover; /* Cobre a área sem distorcer */
+    height: 220px; /* Altura um pouco maior */
+    object-fit: cover; 
     display: block;
 }
 
 .article-header {
-    padding: 15px 20px 0;
+    padding: 20px 25px 0;
 }
 
 .article-header h2 {
-    font-size: 1.4em;
+    font-size: 1.5em; /* Aumentado um pouco */
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
 .article-content {
-    padding: 0 20px 20px;
+    padding: 0 25px 25px;
 }
 
 .article-content p {
-    font-size: 0.95em;
+    font-size: 1em; 
     color: var(--text-light);
     margin-bottom: 15px;
 }
@@ -120,20 +120,21 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s;
+    border-bottom: 2px solid transparent; /* Efeito de sublinhado mais sutil */
+    transition: border-bottom-color 0.3s;
 }
 
 .read-more:hover {
-    color: var(--secondary-color);
+    border-bottom-color: var(--primary-color);
 }
 
-/* 5. Rodapé */
+/* 6. Rodapé */
 footer {
     background-color: var(--secondary-color);
     color: var(--text-light);
     text-align: center;
-    padding: 15px;
-    /* Removido position: fixed para evitar sobreposição em telas pequenas */
+    padding: 20px; /* Mais padding */
     width: 100%;
-    margin-top: 40px; 
+    margin-top: 50px; 
+    font-size: 0.9em;
 }
