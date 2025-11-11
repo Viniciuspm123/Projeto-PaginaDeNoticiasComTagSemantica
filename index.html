@@ -8,51 +8,53 @@
     <meta name="author" content="vinicius Marques">
     <title>Página de Notícias</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
+    <header class="page-header">
         <h1>Últimas Notícias</h1>
-        <nav>
+        <nav class="main-nav">
             <ul>
-                <li><a href="#noticia1">Notícia 1</a></li>
-                <li><a href="#noticia2">Notícia 2</a></li>
-                <li><a href="#noticia3">Notícia 3</a></li>
+                <li><a href="#noticia1">Política</a></li>
+                <li><a href="#noticia2">Tecnologia</a></li>
+                <li><a href="#noticia3">Meio Ambiente</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <article id="noticia1">
-            <header>
-                <img src="img/Lula.png" alt="Notícia 1" class="noticia-img">
+    <main class="news-grid" role="main">
+        <article id="noticia1" class="news-article">
+            <img src="img/Lula.png" alt="Notícia sobre a cirurgia do Presidente Lula" class="article-img">
+            <header class="article-header">
                 <h2>Waack: Cirurgia de Lula impõe discussão sobre 2026</h2>
             </header>
-            <section>
-                <p>Presidente Lula foi submetido a uma cirurgia durante a madrugada desta terça para a remoção de um hematoma intracraniano</p>
+            <section class="article-content">
+                <p>Presidente Lula foi submetido a uma cirurgia durante a madrugada desta terça para a remoção de um hematoma intracraniano.</p>
+                <a href="#" class="read-more">Leia mais &rarr;</a>
             </section>
         </article>
 
-        <article id="noticia2">
-            <header>
-                <img src="img/ia.png" alt="Notícia 2" class="noticia-img">
-                <h2>Senado aprova regras para inteligência artificial no Brasil, com identificação biométrica para auxiliar em prisões</h2>
+        <article id="noticia2" class="news-article">
+            <img src="img/ia.png" alt="Notícia sobre regras de Inteligência Artificial no Senado" class="article-img">
+            <header class="article-header">
+                <h2>Senado aprova regras para inteligência artificial no Brasil</h2>
             </header>
-            <section>
-                <p>O plenário do Senado aprovou nesta terça-feira (10) projeto que regulamenta o uso de inteligência artificial (IA) no Brasil. O texto ainda precisará passar pela Câmara dos Deputados antes de virar lei.</p>
+            <section class="article-content">
+                <p>O plenário do Senado aprovou projeto que regulamenta o uso de inteligência artificial (IA) no Brasil. O texto ainda precisará passar pela Câmara dos Deputados.</p>
+                <a href="#" class="read-more">Leia mais &rarr;</a>
             </section>
         </article>
 
-        <article id="noticia3">
-            <header>
-                <img src="img/lixo.png" alt="Notícia 3" class="noticia-img">
+        <article id="noticia3" class="news-article">
+            <img src="img/lixo.png" alt="Notícia sobre aumento da produção de lixo no Brasil" class="article-img">
+            <header class="article-header">
                 <h2>Produção de lixo por habitante aumenta no Brasil</h2>
             </header>
-            <section>
-                <p>A Associação Brasileira de Resíduos e Meio Ambiente divulgou um panorama sobre a produção de lixo no país. Uma das conclusões é que a geração de resíduos por habitante aumentou em um ano.
-
-                    Oitenta milhões de toneladas. Essa quantidade, difícil de imaginar, é o total de lixo produzido no Brasil em 2023. O que dá, em média, 382 quilos de resíduos descartados por pessoa no país durante o ano. Número um pouco maior que o de 2022.</p>
+            <section class="article-content">
+                <p>A Associação Brasileira de Resíduos e Meio Ambiente divulgou que a geração de resíduos por habitante aumentou em um ano, chegando a 382 quilos por pessoa em 2023.</p>
+                <a href="#" class="read-more">Leia mais &rarr;</a>
             </section>
         </article>
     </main>
