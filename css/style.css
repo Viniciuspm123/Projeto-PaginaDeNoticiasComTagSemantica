@@ -9,6 +9,11 @@
     --shadow-color: rgba(0, 0, 0, 0.08); /* Sombra mais suave */
 }
 
+/* Garante que o elemento raiz HTML respeite a altura total */
+html {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,10 +26,10 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 
-    /* CORREÇÃO: Usamos Flexbox para preencher a altura da tela */
+    /* CORREÇÃO DO ESPAÇAMENTO: Flexbox para esticar a página verticalmente */
     display: flex;
-    flex-direction: column; /* Organiza os filhos (header, main, footer) verticalmente */
-    min-height: 100vh; /* Garante que a página ocupe pelo menos 100% da altura da viewport */
+    flex-direction: column; 
+    min-height: 100vh;
 }
 
 /* 2. Header e Navegação */
@@ -67,10 +72,12 @@ body {
 /* 3. Layout Principal (CSS Grid) */
 .news-grid {
     max-width: 1280px;
-    margin: 50px auto; 
-    padding: 0 30px;
+    
+    /* Zero a margem inferior e adiciona padding interno para espaçamento */
+    margin: 50px auto 0; 
+    padding: 0 30px 50px; 
 
-    /* CORREÇÃO APLICADA AQUI: Permite que o MAIN preencha todo o espaço vertical disponível */
+    /* Permite que o MAIN preencha todo o espaço vertical disponível */
     flex-grow: 1; 
 
     /* CSS Grid: Layout responsivo de 3 colunas */
@@ -83,7 +90,7 @@ body {
 .news-article {
     background-color: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    box-shadow: 0 10px 30px var(--shadow-color); /* Sombra suave para efeito 3D */
     overflow: hidden; 
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
@@ -143,7 +150,7 @@ footer {
     text-align: center;
     padding: 20px 0; 
     width: 100%;
-    /* Removido o margin-top, pois o flex-grow do main empurra o footer */
+    /* Garantia de que não há margem extra empurrando para baixo */
     margin-top: 0; 
     font-size: 0.9em;
 }
