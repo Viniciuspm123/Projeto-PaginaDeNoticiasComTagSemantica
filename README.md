@@ -1,7 +1,3 @@
-Com certeza! Entendido. Vou remover a parte onde o README.md detalha a estrutura do código HTML (o bloco de código que começa com <h2> e contém as tags de notícia).
-
-Aqui está o conteúdo do README.md atualizado, com a remoção solicitada e mantendo a estrutura de pastas correta:
-
 📰 Projeto: Página de Notícias com Estrutura Semântica
 Este projeto é a implementação de uma página inicial de notícias, utilizando uma estrutura HTML Semântica completa e um design limpo e focado no conteúdo, facilitando a navegação e a leitura das informações.
 
