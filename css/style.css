@@ -61,14 +61,15 @@ body {
 
 /* 3. Layout Principal (CSS Grid) */
 .news-grid {
+    /* CORREÇÃO APLICADA AQUI: Margem inferior definida como 0 para evitar espaço branco */
     max-width: 1280px;
-    margin: 50px auto; /* Aumentamos o espaçamento vertical */
+    margin: 50px auto 0; 
     padding: 0 30px;
 
     /* CSS Grid: Layout responsivo de 3 colunas */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px; /* Aumentamos o espaçamento entre os cards */
+    gap: 40px; 
 }
 
 /* 4. Estilos do Artigo (Card) */
@@ -82,14 +83,14 @@ body {
 
 /* Efeito de destaque no hover */
 .news-article:hover {
-    transform: translateY(-8px); /* Move mais para cima */
+    transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* 5. Imagem (Correção e Estilo) */
+/* 5. Imagem */
 .article-img {
     width: 100%;
-    height: 220px; /* Altura um pouco maior */
+    height: 220px; 
     object-fit: cover; 
     display: block;
 }
@@ -99,7 +100,7 @@ body {
 }
 
 .article-header h2 {
-    font-size: 1.5em; /* Aumentado um pouco */
+    font-size: 1.5em; 
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 10px;
@@ -120,7 +121,7 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    border-bottom: 2px solid transparent; /* Efeito de sublinhado mais sutil */
+    border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s;
 }
 
@@ -133,8 +134,9 @@ footer {
     background-color: var(--secondary-color);
     color: var(--text-light);
     text-align: center;
-    padding: 20px; /* Mais padding */
+    padding: 20px 0; 
     width: 100%;
-    margin-top: 50px; 
+    /* CORREÇÃO APLICADA AQUI: Remove a margem extra que causava o espaço */
+    margin-top: 0; 
     font-size: 0.9em;
 }
