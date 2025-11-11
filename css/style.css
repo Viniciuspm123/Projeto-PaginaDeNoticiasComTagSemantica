@@ -20,6 +20,11 @@ body {
     background-color: var(--light-bg);
     color: var(--text-color);
     line-height: 1.6;
+
+    /* CORREÇÃO: Usamos Flexbox para preencher a altura da tela */
+    display: flex;
+    flex-direction: column; /* Organiza os filhos (header, main, footer) verticalmente */
+    min-height: 100vh; /* Garante que a página ocupe pelo menos 100% da altura da viewport */
 }
 
 /* 2. Header e Navegação */
@@ -28,7 +33,7 @@ body {
     color: var(--card-bg);
     padding: 30px 20px 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais forte no header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .page-header h1 {
@@ -61,10 +66,12 @@ body {
 
 /* 3. Layout Principal (CSS Grid) */
 .news-grid {
-    /* CORREÇÃO APLICADA AQUI: Margem inferior definida como 0 para evitar espaço branco */
     max-width: 1280px;
-    margin: 50px auto 0; 
+    margin: 50px auto; 
     padding: 0 30px;
+
+    /* CORREÇÃO APLICADA AQUI: Permite que o MAIN preencha todo o espaço vertical disponível */
+    flex-grow: 1; 
 
     /* CSS Grid: Layout responsivo de 3 colunas */
     display: grid;
@@ -76,7 +83,7 @@ body {
 .news-article {
     background-color: var(--card-bg);
     border-radius: 12px;
-    box-shadow: 0 10px 30px var(--shadow-color); /* Sombra suave para efeito 3D */
+    box-shadow: 0 10px 30px var(--shadow-color);
     overflow: hidden; 
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
@@ -136,7 +143,7 @@ footer {
     text-align: center;
     padding: 20px 0; 
     width: 100%;
-    /* CORREÇÃO APLICADA AQUI: Remove a margem extra que causava o espaço */
+    /* Removido o margin-top, pois o flex-grow do main empurra o footer */
     margin-top: 0; 
     font-size: 0.9em;
 }
